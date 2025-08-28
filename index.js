@@ -2,7 +2,7 @@ window.onload = function () {
 const canvas = document.getElementById('canvas_id');
 const DownloadButton = document.getElementById('DownloadButton');
 const UndoButton = document.getElementById('Undo');
-const ClearButton= document.getElementById('Clear');
+// const ClearButton= document.getElementById('Clear');
 // const ColorButton=document.getElementById('Color');
 // const EraserButton=document.getElementById('Eraser');
 // const addEventListners = () => {
