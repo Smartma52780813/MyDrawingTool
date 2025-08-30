@@ -2,35 +2,7 @@ window.onload = function () {
 const canvas = document.getElementById('canvas_id');
 const DownloadButton = document.getElementById('DownloadButton');
 const UndoButton = document.getElementById('Undo');
-// const ClearButton= document.getElementById('Clear');
-// const ColorButton=document.getElementById('Color');
-// const EraserButton=document.getElementById('Eraser');
-// const addEventListners = () => {
-//     LinesButton.onclick =() => {
-//         canvas.style.cursor = 'crosshair';
-//         canvas.onmousedown =(e) => {
-//             const rect = canvas.getBoundingClientRect();
-//             const x = e.clientX - rect.left;
-//             const y =e.clientY - rect.top;
-//             context1.beginPath();
-//             context1.moveTo(x,y);
-//             canvas.onmousemove =(e) => {
-//                 const rect = canvas.getBoundingClientRect();
-//                 const x1 = e.clientX - rect.left;
-//                 const y1 =e.clientY - rect.top;
-//                 context1.lineTo(x1,y1);
-//                 context1.stroke();
 
-//             }
-
-//         }
-//     }
-// }
-// const LinesButton=document.getElementById('Lines')
-// const PencilButton=document.getElementById('Pencil')
-// const CircleButton=document.getElementById('Circle')
-// const MarkerButton=document.getElementById('Marker')
-// canvas dimesions
 let isDrawing = false
 let drawingPath=[]
 
@@ -95,14 +67,8 @@ const drawingPathFunction = (ctx, path, color) => {
     }
     ctx.stroke()
 }
-// const drawline=()=>{
-//   const context=canvas.getContext("2d")
-//   context.beginPath()
-//   context.moveTo(50,90)
-//   context.lineTo(120,440)
-//   context.stroke()
-// }
-// drawline()
+
+
     const sketch = (ctx1, drawingPath, color = "black") => {
         for (const path of drawingPath) {
            drawingPathFunction(ctx1, path, color)
@@ -163,37 +129,4 @@ DownloadButton.onclick = () => {
 
 
 
-// ClearButton.onclick = () => {
-//     context1.clearRect(0,0, canvas.width, canvas.height)
-//     drawingPath = []
-//     UndoButton.disabled = true;
-// };
-// ColorButton.onclick = () => {
-//     context1.fillStyle='white'
-//     context1.fillRect(0, 0, canvas.width, canvas.height)
-// };
 
-
-
-// EraserButton.onclick = () => {
-//     context1.strokeStyle = 'black';
-//     context1.lineWidth = 10;
-//     canvas.style.cursor = 'crosshair';
-//     canvas.onmousedown =(e) =>{
-//         const rect = canvas.getBoundingClientRect();
-//         const x = e.clientX - rect.left;
-//         const y = e.clientY - rect.top;
-//         context1.beginPath();
-//         context1.moveTo(x,y);
-//         canvas.onmousemove =(e) => {
-//             const rect = canvas.getBoundingClientRect();
-//             const x1 = e.clientX - rect.left;
-//             const y1 =e.clientY - rect.top;
-//             context1.lineTo(x1,y1);
-//             context1.stroke();
-
-//         };
-
-
-//     };
-// };
